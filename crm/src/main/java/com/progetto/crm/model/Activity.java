@@ -34,7 +34,7 @@ public class Activity {
     @Column
     private String description;
 
-     @ManyToMany (mappedBy = "activities")
+    @ManyToMany (mappedBy = "activities")
     private List<Contact> contacts;
 
     public Activity(String activityType, LocalDate dateTime, String manager, String description, List<Contact> contacts) {

@@ -39,7 +39,7 @@ public class Contact {
 
     @ManyToMany
     @JoinTable( name= "table_contact_activity",
-     joinColumns= @JoinColumn(name = "contact_id"),
+    joinColumns= @JoinColumn(name = "contact_id"),
      inverseJoinColumns = @JoinColumn(name = "activity_id")
      )
     private List<Activity> activities;

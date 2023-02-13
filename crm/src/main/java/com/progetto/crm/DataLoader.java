@@ -36,17 +36,24 @@ public class DataLoader implements CommandLineRunner {
         activityService.save(activity2);
         activityService.save(activity3);
 
-        List<Activity> myActivityList = new ArrayList<>();
-         myActivityList.add(activity1);
-         myActivityList.add(activity2);
-         myActivityList.add(activity3);
+        List<Activity> firstActivityList = new ArrayList<>();
+        firstActivityList.add(activity1);
+        firstActivityList.add(activity2);
+        
+        List<Activity> secondActivityList = new ArrayList<>();
+        secondActivityList.add(activity2);
+        secondActivityList.add(activity3);
+
+        List<Activity> thirdActivityList = new ArrayList<>();
+        thirdActivityList.add(activity1);
+        thirdActivityList.add(activity3);
 
         //CONTACTS
 
-        Contact contact1 = new Contact("Giulia", "Cassano", "Italy", "giuliacassano1993@gmail.com", "3341076040", myActivityList);
-        Contact contact2 = new Contact("Andrew", "Brown", "United Kingdom", "andrew.brown@gmail.com", "3482639003", myActivityList);
-        Contact contact3 = new Contact("Steven", "Johnson", "United States of America", "steven.johnson@gmail.com", "5279446921", myActivityList);
-        Contact contact4 = new Contact("Cristina", "Palacios", "Spain", "cristina.palacios@adecco.es", "6859375308", myActivityList);
+        Contact contact1 = new Contact("Giulia", "Cassano", "Italy", "giuliacassano1993@gmail.com", "3341076040", firstActivityList);
+        Contact contact2 = new Contact("Andrew", "Brown", "United Kingdom", "andrew.brown@gmail.com", "3482639003", secondActivityList);
+        Contact contact3 = new Contact("Steven", "Johnson", "United States of America", "steven.johnson@gmail.com", "5279446921", thirdActivityList);
+        Contact contact4 = new Contact("Cristina", "Palacios", "Spain", "cristina.palacios@adecco.es", "6859375308", null);
 
         contactService.save(contact1);
         contactService.save(contact2);
@@ -54,11 +61,11 @@ public class DataLoader implements CommandLineRunner {
         contactService.save(contact4);
 
        
-        List<Contact> myContactList = new ArrayList<>();
-        myContactList.add(contact1);
-        myContactList.add(contact2);
-        myContactList.add(contact3);
-        myContactList.add(contact4);
+        // List<Contact> myContactList = new ArrayList<>();
+        // myContactList.add(contact1);
+        // myContactList.add(contact2);
+        // myContactList.add(contact3);
+        // myContactList.add(contact4);
 
 
          

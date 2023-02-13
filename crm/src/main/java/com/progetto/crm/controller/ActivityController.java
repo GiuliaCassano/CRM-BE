@@ -22,6 +22,7 @@ import com.progetto.crm.service.ActivityService;
 @RestController
 @RequestMapping("/activity")
 public class ActivityController {
+
     @Autowired
     ActivityService activityService;
 
