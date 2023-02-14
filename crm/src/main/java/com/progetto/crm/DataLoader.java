@@ -31,10 +31,12 @@ public class DataLoader implements CommandLineRunner {
         Activity activity1 = new Activity("Meeting call", LocalDate.of(2023, 2, 21), "Tomaso Goffredo", "Agenda: Salary review", null);
         Activity activity2 = new Activity("Email", LocalDate.of(2023, 3, 01), "Laura Munoz", "Recruiting new marketing specialist", null);
         Activity activity3 = new Activity("PR interview", LocalDate.of(2023, 2, 15), "Sara Kirk", "Market trend", null);
-
+        Activity activity4 = new Activity("Phone call", null, null, null, null);
+        
         activityService.save(activity1);
         activityService.save(activity2);
         activityService.save(activity3);
+        activityService.save(activity4);
 
         List<Activity> firstActivityList = new ArrayList<>();
         firstActivityList.add(activity1);
@@ -52,21 +54,15 @@ public class DataLoader implements CommandLineRunner {
 
         Contact contact1 = new Contact("Giulia", "Cassano", "Italy", "giuliacassano1993@gmail.com", "3341076040", firstActivityList);
         Contact contact2 = new Contact("Andrew", "Brown", "United Kingdom", "andrew.brown@gmail.com", "3482639003", secondActivityList);
-        Contact contact3 = new Contact("Steven", "Johnson", "United States of America", "steven.johnson@gmail.com", "5279446921", thirdActivityList);
-        Contact contact4 = new Contact("Cristina", "Palacios", "Spain", "cristina.palacios@adecco.es", "6859375308", null);
+        Contact contact3 = new Contact("Steven", "Johnson", "United States of America", "steven.johnson@gmail.com", "5279446921", firstActivityList);
+        Contact contact4 = new Contact("Cristina", "Palacios", "Spain", "cristina.palacios@adecco.es", "6859375308", thirdActivityList);
 
         contactService.save(contact1);
         contactService.save(contact2);
         contactService.save(contact3);
         contactService.save(contact4);
 
-       
-        // List<Contact> myContactList = new ArrayList<>();
-        // myContactList.add(contact1);
-        // myContactList.add(contact2);
-        // myContactList.add(contact3);
-        // myContactList.add(contact4);
-
+  
 
          
 
