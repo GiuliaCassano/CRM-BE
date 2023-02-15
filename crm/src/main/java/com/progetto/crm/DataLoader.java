@@ -31,12 +31,11 @@ public class DataLoader implements CommandLineRunner {
         Activity activity1 = new Activity("Meeting call", LocalDate.of(2023, 2, 21), "Tomaso Goffredo", "Agenda: Salary review", null);
         Activity activity2 = new Activity("Email", LocalDate.of(2023, 3, 01), "Laura Munoz", "Recruiting new marketing specialist", null);
         Activity activity3 = new Activity("PR interview", LocalDate.of(2023, 2, 15), "Sara Kirk", "Market trend", null);
-        Activity activity4 = new Activity("Phone call", null, null, null, null);
         
         activityService.save(activity1);
         activityService.save(activity2);
         activityService.save(activity3);
-        activityService.save(activity4);
+        
 
         List<Activity> firstActivityList = new ArrayList<>();
         firstActivityList.add(activity1);
