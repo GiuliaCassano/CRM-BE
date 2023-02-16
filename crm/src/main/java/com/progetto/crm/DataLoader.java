@@ -2,7 +2,7 @@ package com.progetto.crm;
 import java.util.ArrayList;
 import java.util.List;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -28,9 +28,9 @@ public class DataLoader implements CommandLineRunner {
         
          //ACTIVITY
          
-        Activity activity1 = new Activity("Meeting call", LocalDate.of(2023, 2, 21), "Tomaso Goffredo", "Agenda: Salary review", null);
-        Activity activity2 = new Activity("Email", LocalDate.of(2023, 3, 01), "Laura Munoz", "Recruiting new marketing specialist", null);
-        Activity activity3 = new Activity("PR interview", LocalDate.of(2023, 2, 15), "Sara Kirk", "Market trend", null);
+        Activity activity1 = new Activity("Meeting call", LocalDateTime.of(2023, 2, 21, 12, 30), "Tomaso Goffredo", "Agenda: Salary review", null);
+        Activity activity2 = new Activity("Email", LocalDateTime.of(2023, 3, 01, 11, 45), "Laura Munoz", "Recruiting new marketing specialist", null);
+        Activity activity3 = new Activity("PR interview", LocalDateTime.of(2023, 2, 15, 9, 15), "Sara Kirk", "Market trend", null);
         
         activityService.save(activity1);
         activityService.save(activity2);

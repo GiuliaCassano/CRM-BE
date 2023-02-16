@@ -1,6 +1,6 @@
 package com.progetto.crm.model;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIncludeProperties;
@@ -27,7 +27,7 @@ public class Activity {
     private String activityType;
 
     @Column
-    private LocalDate dateTime;
+    private LocalDateTime dateTime;
 
     @Column
     private String manager;
@@ -39,7 +39,7 @@ public class Activity {
     @JsonIncludeProperties({"id", "firstName", "lastName", "country", "email", "phoneNumber"})
     private List<Contact> contacts;
 
-    public Activity(String activityType, LocalDate dateTime, String manager, String description, List<Contact> contacts) {
+    public Activity(String activityType, LocalDateTime dateTime, String manager, String description, List<Contact> contacts) {
         this.activityType = activityType;
         this.dateTime = dateTime;
         this.manager = manager;
