@@ -47,7 +47,7 @@ public class ActivityController {
     //FINDBYMANAGER
     @GetMapping("/find/manager")
     public ResponseEntity<Activity> getActivityByManager(@RequestParam String manager){
-        return new ResponseEntity<>(activityService.findByActivityType(manager), HttpStatus.OK);
+        return new ResponseEntity<>(activityService.findByManager(manager), HttpStatus.OK);
     }
 
     //UPDATE
