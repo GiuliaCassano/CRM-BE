@@ -24,6 +24,11 @@ public class ActivityService {
         return activityRepository.findAll();
     }
 
+    //FINDBYID
+    public Activity findById(Long id){ 
+        return activityRepository.findById(id).get();
+    }
+
     //FINDBYACTIVITYTYPE
     public Activity findByActivityType(String activityType){
         return activityRepository.findByActivityType(activityType);

@@ -58,6 +58,9 @@ public class ActivityController {
     //DELETE
     @DeleteMapping("/delete")
     public ResponseEntity<String> deleteActivity(@RequestParam Long id){
+        if(activityService.findById(id).getContacts() != null){
+            activityService.findById(id).setContacts(null);
+        }
         activityService.deleteActivity(id);
         return new ResponseEntity<>("Activity deleted", HttpStatus.OK);
     }

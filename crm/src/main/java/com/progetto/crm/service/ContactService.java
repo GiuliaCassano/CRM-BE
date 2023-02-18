@@ -24,6 +24,11 @@ public class ContactService {
         return contactRepository.findAll();
     }
 
+    //FINDBYID
+    public Contact findById(Long id){
+        return contactRepository.findById(id).get(); //Senza il get ritorna un optional
+    }
+
     // FINDBYEMAIL---->CUSTOM
     public Contact findByEmail(String email) {
         return contactRepository.findByEmail(email);
@@ -49,7 +54,12 @@ public class ContactService {
      // DELETE
      public void deleteContact(Long id){
         contactRepository.deleteById(id);
+
      }
+
+     
+
+     
     
 }
 

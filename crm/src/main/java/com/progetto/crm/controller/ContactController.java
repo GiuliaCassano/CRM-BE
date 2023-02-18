@@ -19,13 +19,13 @@ import com.progetto.crm.service.ContactService;
 
 
 
-
 @CrossOrigin
 @RestController
 @RequestMapping("/contact")
 public class ContactController {
     @Autowired
     ContactService contactService;
+
 
     // GET ALL
     @GetMapping("/all")
@@ -54,6 +54,9 @@ public class ContactController {
     // DELETE
     @DeleteMapping("/delete")
     public ResponseEntity<String> deleteContact(@RequestParam Long id){
+        if (contactService.findById(id).getActivities() != null){
+            contactService.findById(id).setActivities(null);
+        }
         contactService.deleteContact(id);
         return new ResponseEntity<>("Contact deleted", HttpStatus.OK);
     }
