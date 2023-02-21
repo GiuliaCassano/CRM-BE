@@ -54,6 +54,7 @@ public class ContactController {
     // DELETE
     @DeleteMapping("/delete")
     public ResponseEntity<String> deleteContact(@RequestParam Long id){
+
         if (contactService.findById(id).getActivities() != null){
             contactService.findById(id).setActivities(null);
         }

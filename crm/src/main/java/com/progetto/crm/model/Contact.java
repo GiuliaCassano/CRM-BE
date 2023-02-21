@@ -38,7 +38,7 @@ public class Contact {
     @Column
     private String phoneNumber;
 
-    @ManyToMany
+    @ManyToMany 
     @JoinTable(name = "join_table")
     @JsonIncludeProperties({"id", "activityType", "dateTime", "manager", "description"})
     private List<Activity> activities;

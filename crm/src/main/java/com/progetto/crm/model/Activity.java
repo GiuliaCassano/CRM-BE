@@ -3,6 +3,8 @@ package com.progetto.crm.model;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import org.hibernate.annotations.CascadeType;
+
 import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 
 import jakarta.persistence.Column;
