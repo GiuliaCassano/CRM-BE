@@ -48,6 +48,9 @@ public class ContactController {
     // UPDATE
     @PutMapping("/update")
     public ResponseEntity<Contact> updateContactById(@RequestParam Long id, @RequestBody Contact newContact){
+        System.out.println(id);
+        System.out.println(newContact);
+
         return new ResponseEntity<>(contactService.updateContact(id, newContact), HttpStatus.OK);
     }
 

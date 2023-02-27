@@ -38,6 +38,12 @@ public class ActivityController {
         return new ResponseEntity<>(activityService.save(activity), HttpStatus.OK);
     }
 
+    //FINDBYID
+    @GetMapping("/find/id")
+    public ResponseEntity<Activity> getActivityById(@RequestParam Long id){
+        return new ResponseEntity<>(activityService.findById(id), HttpStatus.OK);
+    }
+
     //FINDBYACTIVITYTYPE
     @GetMapping("/find/activitytype")
     public ResponseEntity<Activity> getActivityByActivityType(@RequestParam String activityType){
