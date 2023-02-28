@@ -30,16 +30,17 @@ public class DataLoader implements CommandLineRunner {
          
         Activity activity1 = new Activity("Meeting call", LocalDateTime.of(2023, 2, 21, 12, 30), "Tomaso Goffredo", "Agenda: Salary review", null);
         Activity activity2 = new Activity("Email", LocalDateTime.of(2023, 3, 01, 11, 45), "Laura Munoz", "Recruiting new marketing specialist", null);
-        Activity activity3 = new Activity("PR interview", LocalDateTime.of(2023, 2, 15, 9, 15), "Sara Kirk", "Market trend", null);
-        
+        Activity activity3 = new Activity("Meeting in office", LocalDateTime.of(2023, 3, 15, 9, 15), "Sara Kirk", "Market trend", null);
+        Activity activity4 = new Activity("PR interview", LocalDateTime.of(2023, 3, 15, 9, 15), "Michael Finnis", "Talk about new hirings", null);
+
         activityService.save(activity1);
         activityService.save(activity2);
         activityService.save(activity3);
-        
+        activityService.save(activity4);
 
         List<Activity> firstActivityList = new ArrayList<>();
         firstActivityList.add(activity1);
-        firstActivityList.add(activity2);
+        firstActivityList.add(activity4);
         
         List<Activity> secondActivityList = new ArrayList<>();
         secondActivityList.add(activity2);
@@ -48,6 +49,10 @@ public class DataLoader implements CommandLineRunner {
         List<Activity> thirdActivityList = new ArrayList<>();
         thirdActivityList.add(activity1);
         thirdActivityList.add(activity3);
+
+        List<Activity> fourthActivityList = new ArrayList<>();
+        fourthActivityList.add(activity2);
+        fourthActivityList.add(activity4);
 
         //CONTACTS
 
